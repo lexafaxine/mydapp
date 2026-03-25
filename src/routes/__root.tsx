@@ -9,6 +9,7 @@ import Footer from '../components/Footer'
 import Header from '../components/Header'
 
 import TanStackQueryProvider from '../integrations/tanstack-query/root-provider'
+import { Web3Provider } from '../integrations/web3/provider'
 
 import TanStackQueryDevtools from '../integrations/tanstack-query/devtools'
 
@@ -60,6 +61,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       </head>
       <body className="font-sans antialiased [overflow-wrap:anywhere] selection:bg-[rgba(79,184,178,0.24)]">
         <TanStackQueryProvider>
+          <Web3Provider>
           <Header />
           {children}
           <Footer />
@@ -75,6 +77,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
               TanStackQueryDevtools,
             ]}
           />
+        </Web3Provider>
         </TanStackQueryProvider>
         <Scripts />
       </body>

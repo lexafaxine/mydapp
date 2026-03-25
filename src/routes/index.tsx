@@ -1,5 +1,4 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { Wallet } from 'lucide-react'
 
 export const Route = createFileRoute('/')({
   component: HomePage,
@@ -16,13 +15,6 @@ function HomePage() {
           A decentralized application built with TanStack Start on the Sepolia
           testnet.
         </p>
-        <button
-          type="button"
-          className="inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3 font-semibold text-primary-foreground transition hover:opacity-90"
-        >
-          <Wallet className="h-5 w-5" />
-          Connect Wallet
-        </button>
       </div>
     </main>
   )
